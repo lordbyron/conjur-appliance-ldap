@@ -9,8 +9,6 @@ ADD run /etc/service/conjur/authn-ldap/
 RUN chmod a+x /etc/service/conjur/authn-ldap/run
 RUN ln -s /etc/service/conjur/service /etc/service/conjur/authn-ldap/run-service
 
-#ADD authn-ldap.conf /opt/conjur/etc/authn-ldap.conf
-
 WORKDIR /opt/conjur/authn-ldap/current/
 RUN bundle install
 RUN chmod a+r -R /var/lib/gems/2.0.0/gems
